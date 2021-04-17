@@ -3,12 +3,13 @@ import Column from '../Column/Column';
 import Container from '../Container/Container';
 import Content from '../Content/Content';
 import Header from '../Header/Header';
+import styles from './WebBuilder.module.css';
 
 class WebBuilder extends Component{
 
     render(){
         return (
-            <Container>
+            <Container className={styles["WebBuilder"]}>
                 <Header/>
                 <Column/>
                 <Content/>

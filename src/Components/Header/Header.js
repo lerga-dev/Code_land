@@ -1,9 +1,10 @@
 import Container from '../Container/Container';
+import classes from './Header.css';
 
 const header = (props) => {
     return(
-        <Container>
-            <header>Hello world!</header>
+        <Container className={classes.Header}>
+            <div>This is a header!</div>
         </Container>
     )
 };
