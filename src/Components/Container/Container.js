@@ -1,3 +1,7 @@
-const container = (props) => props.children;
+const container = (props) => {
+    return(
+        <div className={props.className}>{props.children}</div>
+    )
+}
 
 export default container;

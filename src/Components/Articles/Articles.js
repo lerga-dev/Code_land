@@ -4,7 +4,8 @@ import Article from './Article/Article';
 const articles = (props) => {
     return(
         <Container>
-            <div>This is the list for the articles!</div>
+            <Article/>
+            <Article/>
             <Article/>
         </Container>
     )
