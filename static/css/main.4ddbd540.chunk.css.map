@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/Components/WebBuilder/WebBuilder.module.css"],"names":[],"mappings":"AAAA,sCACI,4BAA6B,CAC7B,UACJ","file":"main.4ddbd540.chunk.css","sourcesContent":[".WebBuilder{\r\n    font-family: \"Lucida Console\";\r\n    color: blue;\r\n}"]}
