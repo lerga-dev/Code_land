@@ -1,7 +1,3 @@
-import React, { Component } from 'react';
+const container = (props) => props.children;
 
-class WebContainer extends Component{
-    
-}
-
-export default WebContainer;
+export default container;
