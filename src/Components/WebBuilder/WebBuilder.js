@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Column from '../Column/Column';
 import Content from '../Content/Content';
 import Header from '../Header/Header';
 import styles from './WebBuilder.module.css';
@@ -19,14 +18,9 @@ class WebBuilder extends Component{
                         <Header/>
                     </Row>
                     <Row>
-                        <div class="col-4">
-                            <Column/>
-                        </div>
-                        <div class="col-8">
-                            <Container>
-                                <Content/>
-                            </Container>
-                        </div>
+                        <Container>
+                            <Content/>
+                        </Container>
                     </Row>
                 </div>
             </Container>

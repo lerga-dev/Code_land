@@ -6,8 +6,13 @@ import Nav from 'react-bootstrap/Nav';
 const header = (props) => {
     return(
         <Container className={styles["Header"]}>
+            <div class="jumbotron">
+                <h1 class="display-4">Code land</h1>
+                <p class="lead">This site is currently under development.</p>
+            </div>
             <Nav
                 activeKey="/home"
+                variant="tabs"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
                 >
                 <Nav.Item>
@@ -32,10 +37,7 @@ const header = (props) => {
                     <Nav.Link eventKey="link-1">4 Dummies</Nav.Link>
                 </Nav.Item>
             </Nav>
-            <div class="jumbotron">
-                <h1 class="display-4">Code land</h1>
-                <p class="lead">This site is currently under development.</p>
-            </div>
+
         </Container>
     )
 };
