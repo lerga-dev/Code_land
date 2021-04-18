@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Code_land/static/css/main.d77039f2.chunk.css",
-    "main.js": "/Code_land/static/js/main.e2502387.chunk.js",
-    "main.js.map": "/Code_land/static/js/main.e2502387.chunk.js.map",
+    "main.css": "/Code_land/static/css/main.14760cc0.chunk.css",
+    "main.js": "/Code_land/static/js/main.f2d10013.chunk.js",
+    "main.js.map": "/Code_land/static/js/main.f2d10013.chunk.js.map",
     "runtime-main.js": "/Code_land/static/js/runtime-main.0a74e6b3.js",
     "runtime-main.js.map": "/Code_land/static/js/runtime-main.0a74e6b3.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/Code_land/static/css/2.4c97ca4f.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.07235c96.chunk.js.map": "/Code_land/static/js/3.07235c96.chunk.js.map",
     "index.html": "/Code_land/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/Code_land/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.d77039f2.chunk.css.map": "/Code_land/static/css/main.d77039f2.chunk.css.map",
+    "static/css/main.14760cc0.chunk.css.map": "/Code_land/static/css/main.14760cc0.chunk.css.map",
     "static/js/2.77ff8aad.chunk.js.LICENSE.txt": "/Code_land/static/js/2.77ff8aad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0a74e6b3.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.77ff8aad.chunk.js",
-    "static/css/main.d77039f2.chunk.css",
-    "static/js/main.e2502387.chunk.js"
+    "static/css/main.14760cc0.chunk.css",
+    "static/js/main.f2d10013.chunk.js"
   ]
 }
