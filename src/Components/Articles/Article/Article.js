@@ -1,14 +1,16 @@
-import Container from "../../Container/Container";
+import Container from 'react-bootstrap/Container';
+import styles from './Article.module.css'
 
 
 const article = (props) => {
     return(
-        <Container>
+        <Container className={styles["Article"]}>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Article title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go to Article content</a>
+                    <img class="card-img-top" src={props.img}/>
+                    <h5 class="card-title">{props.title}</h5>
+                    <p class="card-text">{props.body1}</p>
+                    <a class="btn btn-primary" href={props.url} role="button">go to article content</a>
                 </div>
             </div>
         </Container>

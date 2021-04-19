@@ -1,13 +1,14 @@
-import Container from "../../../Container/Container";
+import Container from 'react-bootstrap/Container';
 
 const articleContent = (props) => {
     return(
         <Container>
             <div class="jumbotron">
-                <h1 class="display-4">Hello, world!</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <img class="card-img-top" src={props.articleToShow["img"]}/>
+                <h1 class="display-4">{props.articleToShow["title"]}</h1>
+                <p class="lead">{props.articleToShow["body1"]}</p>
                 <hr class="my-4"/>
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p>{props.articleToShow["body2"]}</p>
             </div>
         </Container>
     )

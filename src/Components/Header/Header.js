@@ -1,7 +1,8 @@
-import Container from '../Container/Container';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+
 import styles from './Header.module.css';
 
-import Nav from 'react-bootstrap/Nav';
 
 const header = (props) => {
     return(
@@ -12,7 +13,6 @@ const header = (props) => {
             </div>
             <Nav
                 activeKey="/home"
-                variant="tabs"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
                 >
                 <Nav.Item>
