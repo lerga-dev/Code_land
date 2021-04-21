@@ -7,34 +7,34 @@ import styles from './Header.module.css';
 const header = (props) => {
     return(
         <Container className={styles["Header"]}>
-            <div class="jumbotron">
-                <h1 class="display-4">Code land</h1>
-                <p class="lead">This site is currently under development.</p>
+            <div className="jumbotron">
+                <h1 className="display-4">Code land</h1>
+                <p className="lead">This site is currently under development.</p>
             </div>
             <Nav
                 activeKey="/home"
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                onSelect={(selectedKey) => props.changeFilterSelected(selectedKey)}
                 >
                 <Nav.Item>
-                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link eventKey="Home">Home</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Tools</Nav.Link>
+                    <Nav.Link eventKey="Tools">Tools</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Code Examples</Nav.Link>
+                    <Nav.Link eventKey="Examples">Code Examples</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">News</Nav.Link>
+                    <Nav.Link eventKey="News">News</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Webs</Nav.Link>
+                    <Nav.Link eventKey="Webs">Webs</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Books</Nav.Link>
+                    <Nav.Link eventKey="Books">Books</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">4 Dummies</Nav.Link>
+                    <Nav.Link eventKey="Dummies">4 Dummies</Nav.Link>
                 </Nav.Item>
             </Nav>
 

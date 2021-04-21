@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
@@ -10,59 +10,75 @@ import styles from './WebBuilder.module.css';
 import Articles from '../Articles/Articles';
 
 
-class WebBuilder extends Component{
-    state = {
-        articlesToShow: {
-            article1:{
-                title: "Test Article 1",
-                body1: "This is the body 1 of the Article test.",
-                body2: "This is the body 2 of the Article test.",
-                img: "Images are not supported yet.",
-                url: "/article"
-            },
-            article2:{
-                title: "Test Article 2",
-                body1: "This is the body 1 of the Article test.",
-                body2: "This is the body 2 of the Article test.",
-                img: "Images are not supported yet.",
-                url: "/article"
-            },
-            article3:{
-                title: "Test Article 3",
-                body1: "This is the body 1 of the Article test.",
-                body2: "This is the body 2 of the Article test.",
-                img: "Images are not supported yet.",
-                url: "/article"
-            }
+function WebBuilder(){
+    const [articleSelected, setArticleSelected] = useState("article1");
+    const [filterSelected, setFilterSelected] = useState("Home");
+    const [articlesToShow, setArticlesToShow] = useState({
+        "article1":{
+            category: "Tools",
+            title: "Test Article 1",
+            body1: "This is the body 1 of the Article test.",
+            body2: "This is the body 2 of the Article test.",
+            img: "Images are not supported yet.",
+            url: "/article"
         },
-        articleSelected: "article2"
+        "article2":{
+            category: "Examples",
+            title: "Test Article 2",
+            body1: "This is the body 1 of the Article test.",
+            body2: "This is the body 2 of the Article test.",
+            img: "Images are not supported yet.",
+            url: "/article"
+        },
+        "article3":{
+            category: "News",
+            title: "Test Article 3",
+            body1: "This is the body 1 of the Article test.",
+            body2: "This is the body 2 of the Article test.",
+            img: "Images are not supported yet.",
+            url: "/article"
+        }
+    });
+
+    const changeArticleSelected = (id) => {
+        setArticleSelected(id)
     }
 
-    render(){
-        return (
-            <Container className={styles["WebBuilder"]}>
-                <div class="Container">
-                    <Row>
-                        <Header/>
-                    </Row>
-                    <Row>
-                        <Container>
-                            <Router basename="Code_land">
-                                <Switch>
-                                    <Route exact path="/">
-                                        <Articles articlesToShow={this.state.articlesToShow}/>
-                                    </Route>
-                                    <Route exact path="/article">
-                                        <ArticleContent articleToShow={this.state.articlesToShow[this.state.articleSelected]}/>
-                                    </Route>
-                                </Switch>
-                            </Router>
-                        </Container>
-                    </Row>
-                </div>
-            </Container>
-        );
-    } 
+    const changeFilterSelected = (filter) => {
+        setFilterSelected(filter)
+        let newArticlesToShow = {}
+        Object.keys(articlesToShow)
+        .map(requiredArticleKey => {
+            if(articlesToShow[requiredArticleKey]["category"] === filter){
+                newArticlesToShow.requiredArticleKey = {...articlesToShow[requiredArticleKey]}
+            }
+        });
+        setArticlesToShow(newArticlesToShow)
+    }
+
+    return (
+        <Container className={styles["WebBuilder"]}>
+            <Router basename="Code_land">
+                <Row>
+                    <Header changeFilterSelected={changeFilterSelected}/>
+                </Row>
+                <Row>
+                    <Container>
+                        
+                            <Switch>
+                                <Route exact path="/">
+                                    <Articles articlesToShow={articlesToShow} changeArticleSelected={changeArticleSelected}/>
+                                </Route>
+                                <Route path="/article">
+                                    <ArticleContent articleToShow={articlesToShow[articleSelected]}/>
+                                </Route>
+                            </Switch>
+                        
+                    </Container>
+                </Row>
+            </Router>
+        </Container>
+    );
 }
 
 export default WebBuilder;
